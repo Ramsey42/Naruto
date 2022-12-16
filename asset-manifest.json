@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Naruto/static/css/main.98379694.css",
+    "main.js": "/Naruto/static/js/main.8f1f643e.js",
+    "static/media/anbu.jpg": "/Naruto/static/media/anbu.b2ab749e110ae1cf7c0b.jpg",
+    "static/media/boruto.png": "/Naruto/static/media/boruto.400540a6125597af945c.png",
+    "static/media/sannin.png": "/Naruto/static/media/sannin.890e0cf742d522e349b6.png",
+    "static/media/wall.jpg": "/Naruto/static/media/wall.24eac8e7f6c4fadfbc30.jpg",
+    "static/media/madara.jpg": "/Naruto/static/media/madara.2187416a5c81776f2f6f.jpg",
+    "static/media/tube.png": "/Naruto/static/media/tube.6df920e0b70a90bbe11c.png",
+    "static/media/akatsu.jpg": "/Naruto/static/media/akatsu.7765c38a48d0e52112fd.jpg",
+    "static/media/xbox.png": "/Naruto/static/media/xbox.df0f9ced86ce9efd49e9.png",
+    "static/media/pc.png": "/Naruto/static/media/pc.a4f843a3469578ccc5a6.png",
+    "static/media/twitter.png": "/Naruto/static/media/twitter.e7e6d006053d5f457715.png",
+    "static/media/xbox-one.png": "/Naruto/static/media/xbox-one.a30fb066ddb9800b90fe.png",
+    "static/media/ps5.png": "/Naruto/static/media/ps5.259de9ad7d118b4bb2d1.png",
+    "static/media/ps4.png": "/Naruto/static/media/ps4.d4682d3123975cfe0ab2.png",
+    "static/media/ramsey.jpg": "/Naruto/static/media/ramsey.ea647faa613de697b976.jpg",
+    "index.html": "/Naruto/index.html",
+    "main.98379694.css.map": "/Naruto/static/css/main.98379694.css.map",
+    "main.8f1f643e.js.map": "/Naruto/static/js/main.8f1f643e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98379694.css",
+    "static/js/main.8f1f643e.js"
+  ]
+}
