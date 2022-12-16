@@ -1,38 +1,662 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* max-width: 100%; */
+  overflow-x: hidden;
   }
+
+.header {
+ height: 40px;
+ width: 100%;
+ background: rgb(0,0,0);
+background: linear-gradient(110deg, rgba(0,0,0,1) , rgba(0,0,0,1) 0.8%, rgba(255,1,147,1) 0.8%, rgba(255,1,147,1) 0.85%, rgba(0,0,0,1) 0.85%, rgba(0,0,0,1) 1.6%, rgba(255,1,147,1) 1.65%, rgba(255,1,147,1) 1.75%, rgba(0,0,0,1) 1.75%, rgba(0,0,0,1) 2.65%, rgba(255,1,147,1) 2.65%, rgba(255,1,147,1) 2.75%, rgba(0,0,0,1) 2.75%, rgba(0,0,0,1) 3.6%, rgba(255,1,147,1) 3.6%, rgba(255,1,147,1) 3.7%, rgba(0,0,0,1) 3.7%, rgba(0,0,0,1) 4.6%, rgba(245,79,79,1) 4.6%, rgba(245,79,79,1) 4.7%, rgba(0,0,0,1) 4.7%, rgba(0,0,0,1) 5.4%, rgba(255,94,0,1) 5.4%, rgba(255,94,0,1) 5.6%, rgba(0,0,0,1) 5.6%, rgba(0,0,0,1) 6.3%, rgba(176,177,17,1) 6.3%, rgba(176,177,17,1) 6.52%, rgba(0,0,0,1) 6.52%, rgba(0,0,0,1) 7.1%, rgba(250,255,42,1) 7.1%, rgba(250,255,42,1) 7.45%, rgba(0,0,0,1) 7.45%, rgba(0,0,0,1) 8%, rgba(155,236,47,1) 8%, rgba(155,236,47,1) 8.22%, rgba(0,0,0,1) 8.22%, rgba(0,0,0,1) 8.7%, rgba(51,157,97,1) 8.7%, rgba(51,157,97,1) 9%, rgba(0,0,0,1) 9%, rgba(0,0,0,1) 9.5%, rgba(24,193,109,1) 9.5%, rgba(24,193,109,1) 9.8%, rgba(17,220,236,1) 9.8%, rgba(17,220,236,1) 10%, rgba(81,238,147,0.9472163865546218) 67%);
+overflow: hidden;
+}
+.header-title {
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif BlenderProBold,sans-serif;
+/* font-style: italic; */
+font-size: 18px;
+font-weight: bold;
+padding-top: 5px;
+overflow: hidden;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.update-version {
+  position: absolute;
+  left: 1790px;
+  top:7px;
+  font-size: 13px;
+  
+}
+
+.yellow-box {
+  background-color: yellow;
+  height: 105vh;
+ 
+}
+
+.main-photo {
+  margin-top: 70px;
+  height: 900px;
+  width: 900px;
+  display: flexbox;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.font {
+font-family: 'Faster One', cursive;
+position: absolute;
+display: inline;
+margin-left: -860px;
+bottom: 250px;
+font-size: 70px;
+color: yellow;
+border-style: initial;
+-webkit-text-stroke: 2px black;
+}
+ 
+.box {
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  background: rgba(0,0,0,75);
+  border-radius: 20px;
+  left: 1200px;
+  bottom: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+.box::after
+{
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-image: conic-gradient(transparent, 
+  transparent,transparent, #d400d4);
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+.box::before
+{
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-image: conic-gradient(transparent, 
+  transparent,transparent, #00ccff);
+  animation: animate 4s linear infinite;
+}
+.frame-title {
+  position: absolute;
+  right:225px;
+  bottom: 300px;
+  font-family: BlenderProBold,sans-serif;
+  letter-spacing: 1px;
+}
+.frame-button {
+  position: absolute;
+  right: 310px;
+  bottom: 170px;
+  background-color: 	#E50914;
+  height:85px;
+  width: 337px;
+  border-radius: 1px;
+  cursor: pointer;
+  clip-path: polygon(100% 0, 100% 100%, 8% 100%, 0 61%, 0 0);
   color: white;
+  font-family: BlenderProBold,sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  justify-content: center;
+  border-color: #E50914;
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes animate 
+{
+  0%
+  {
     transform: rotate(0deg);
   }
-  to {
+  100%
+  {
     transform: rotate(360deg);
   }
 }
+
+.box span {
+  position: absolute;
+  inset: 7px;
+  background: #0c1022;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.box img {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 10em;
+  width: 480px;
+  height: 330px;
+}
+.x-box {
+  height: 30px;
+  position: absolute;
+  left: 1290px;
+  bottom: 100px;
+  z-index: 0;
+}
+.ps5 {
+  height: 30px;
+  position: absolute;
+  left: 1350px;
+  bottom: 100px;
+  z-index: 0;
+}
+.pc {
+  height: 25px;
+  position: absolute;
+  left: 1410px;
+  bottom: 100px;
+  z-index: 0; 
+}
+.xbox-one {
+  height: 25px;
+  position: absolute;
+  left: 1460px;
+  bottom: 100px;
+  z-index: 0; 
+}
+.ps4 {
+  height: 25px;
+  position: absolute;
+  left: 1510px;
+  bottom: 100px;
+  z-index: 0; 
+}
+
+.copyright {
+  width: 400px;
+  font-size: 12px;
+  position: absolute;
+  left: 1230px;
+  bottom: 20px;
+  font-family: BlenderProBook,sans-serif;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0.8;
+}
+.tube {
+  height: 55px;
+  position: absolute;
+  left: 1410px;
+  bottom: 780px;
+  z-index: 1; 
+}
+.fb {
+  height: 25px;
+  position: absolute;
+  left: 1465px;
+  bottom: 798px;
+  z-index: 1;
+}
+.twitter {
+  height: 25px;
+  position: absolute;
+  left: 1493px;
+  bottom: 796px;
+  z-index: 1;
+}
+
+.black-box {
+  height: 210px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.one {
+  margin-left:100px;
+}
+.one::after,
+.one::before {
+position:absolute;
+content: '';
+width: 150px;
+height: 150px;
+background: yellow;
+bottom:13.8em;
+
+}
+.one::before {
+  right: 50%;
+  transform: skew(0, 20deg);
+  
+}
+.one::after {
+  left: 50%;
+  transform: skew(0, -20deg);
+}
+
+.two {
+  clip-path: polygon(0 0, 100% 0%, 25% 100%, 7% 100%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 300px;
+  margin-top: -37px;
+
+}
+.three {
+  clip-path: polygon(0 0, 52% 15%, 92% 100%, 7% 100%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 300px;
+  margin-top: -37px;
+
+}
+.four {
+  clip-path: polygon(0 0, 52% 15%, 92% 100%, 7% 100%);
+
+  background-color: black;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 274px;
+  margin-top: -11px;
+  transform: skew(0, 20deg);
+}
+.five {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: yellow;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-left: 474px;
+  margin-top: -21px;
+  transform: skew(0, 20deg);
+}
+.six {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: yellow;
+  position: absolute;
+  height: 120px;
+  width: 80px;
+  margin-left: 574px;
+  margin-top: -102px;
+  transform: skew(10, -60deg);
+}
+.seven {
+  clip-path: polygon(63% 0, 100% 50%, 50% 100%, 0% 50%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  margin-left: 1274px;
+  margin-top: -91px;
+  transform: skew(0, 0deg);
+}
+.eight {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 120px;
+  width: 80px;
+  margin-left: 1274px;
+  margin-top: -95px;
+  transform: skew(0, 10deg);
+}
+.nine {
+  clip-path: polygon(11% 7%, 100% 0%, 100% 100%, 25% 100%, 63% 21%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 20px;
+  width: 80px;
+  margin-left: 1374px;
+  margin-top: -20px;
+  transform: skew(0, 30deg);
+}
+.ten {
+  clip-path: polygon(11% 7%, 100% 0%, 100% 100%, 25% 100%, 63% 21%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 100px;
+  width: 80px;
+  margin-left: 1374px;
+  margin-top: 180px;
+  
+  transform: skew(0, 30deg);
+}
+.onee {
+  clip-path: polygon(11% 7%, 100% 0%, 100% 100%, 25% 100%, 63% 21%);
+
+  background-color: yellow;
+  position: absolute;
+  height: 100px;
+  width: 80px;
+  margin-left: 974px;
+  margin-top: 197px;
+  rotate: 180deg;
+  
+}
+
+.twoo {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 100px;
+  width: 60px;
+  margin-left: 1774px;
+  margin-top: 187px;
+  rotate: 190deg;
+  
+}
+
+.threee{
+  clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  margin-left: 374px;
+  margin-top: 187px;
+  
+  
+}
+
+.fourr{
+  clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 1px;
+  width: 5px;
+  margin-left: 774px;
+  margin-top: 197px;
+  
+  
+}
+.fivee{
+  clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 1px;
+  width: 5px;
+  margin-left: 784px;
+  margin-top: 199px;
+  
+  
+}
+
+.sixx{
+  clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 2px;
+  width: 5px;
+  margin-left: 754px;
+  margin-top: 191px;
+  
+  
+}
+
+
+.sevenn{
+  clip-path: circle(50% at 50% 50%);
+  background-color: black;
+  position: absolute;
+  height: 3px;
+  width: 5px;
+  margin-left: 1424px;
+  margin-top: 197px;
+  
+  
+}
+
+.eightt{
+  clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+  position: absolute;
+  height: 3px;
+  width: 4px;
+  margin-left: 224px;
+  margin-top: 197px;
+  
+  
+}
+
+.list-wrapper {
+  height: 200vh;
+  width: 100%;
+  background-color: yellow;
+  position: relative;
+}
+
+.list-title {
+    color: #000;
+    font-family: BlenderProBold,sans-serif;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 110px;
+    overflow: hidden;
+  
+}
+
+.list-paragraph {
+    text-align: center;
+    font-family: BlenderProBook,sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    width: 60%;
+    margin-left: 20%;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.list-box-wrapper{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.list-box {
+  background-color: #00ffff;
+  height: 700px;
+  width: 805px;
+  margin: 15px;
+  margin-top: 25px;
+  border: 5px solid black;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.akatsuki {
+  height: 470px;
+  width: 795px;
+  padding: 10px;
+}
+.list-box-title {
+  font-family: BlenderProBook,sans-serif;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 30px;
+  word-spacing: 10px;
+  overflow: hidden;
+  text-transform: uppercase;
+  
+}
+
+.list-box-paragraph{
+   font-family: BlenderProBook,sans-serif;
+   margin-top: 20px;
+   text-align: left;
+   padding-left: 50px; 
+   padding-right: 10px; 
+   line-height: 25px;
+   font-weight: 100;
+   word-spacing: 2px;
+  /* overflow: hidden; */ 
+}
+
+
+.meta {
+    height: 100vh;
+    background-image: url(./Components/images/wall.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 1px;
+    
+    
+  z-index: 100;
+  
+}
+.example {
+  height: 380px;
+  width: 550px;
+  background-color: yellow;
+  margin-top: 300px;
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+
+.mini-title {
+  font-family: BlenderProBook,sans-serif;
+  word-spacing: 2px;
+  padding-left: 10px;
+  padding: 20px;
+}
+
+.border {
+  width: 100%;
+  height: 20px;
+  background-color: #000;
+  position: relative;
+}
+
+.corner {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 250px;
+  margin-top: -25px;
+ rotate: 170deg;
+}
+.corner1 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 350px;
+  margin-top: -27px;
+ rotate: 150deg;
+}
+.corner2 {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 550px;
+  margin-top: -31px;
+  /* rotate: 150deg; */
+}
+
+
+.corner3 {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 750px;
+  margin-top: -31px;
+  rotate: 50deg;
+}
+
+
+
+.corner4 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 1050px;
+  margin-top: -25px;
+ rotate: 170deg;
+}
+.corner5 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 1350px;
+  margin-top: -27px;
+ rotate: 150deg;
+}
+.corner6 {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 1550px;
+  margin-top: -31px;
+  /* rotate: 150deg; */
+}
+
+
+.corner7 {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  background-color: yellow;
+  position: absolute;
+  height: 19px;
+  width: 25px;
+  margin-left: 1750px;
+  margin-top: -31px;
+  rotate: 50deg;
+}
+.hr {
+  margin-left: 40px;
+  margin-right: 60px;
+background-color: #000;
+  height: 3px;
+}
+
+.mini-paragraph {
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-family: BlenderProBook,sans-serif;
+font-weight: bold;
+}
+
